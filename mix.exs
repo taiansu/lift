@@ -24,7 +24,9 @@ defmodule Lift.MixProject do
   end
 
   defp deps do
-    []
+    [
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
+    ]
   end
 
   defp description do
@@ -33,8 +35,7 @@ defmodule Lift.MixProject do
 
   defp package do
     [
-      files:
-        ~w(lib priv .formatter.exs mix.exs README* readme* LICENSE* license* CHANGELOG* changelog* src),
+      files: ~w(lib .formatter.exs mix.exs README* * LICENSE*),
       licenses: ["Apache-2.0"],
       links: %{"GitHub" => "https://github.com/taiansu/lift"}
     ]
